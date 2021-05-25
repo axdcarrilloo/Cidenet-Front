@@ -1,0 +1,43 @@
+.formMain {
+    width: 250px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    padding: 5px;
+    border: groove;
+}
+
+.inputsForm {
+    border: none;
+    border-bottom: 2px solid gray;
+    text-align: center;
+    height: 35px;
+}
+
+.inputsForm:focus {
+    border-bottom: 2px solid blue;
+}
+
+.inputsSelectForm {
+    border: none;
+    border-bottom: 2px solid blue;
+    height: 35px;
+    width: 180px;
+    margin-top: 25px;
+}
+
+.btnRegister {
+    background-color: #11BBD9;
+    width: 100px;
+    font-weight: bold;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+}
+
+.h5ValidateCampos {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 12px;
+    font-weight: bold;
+    color: #F90404;
+}

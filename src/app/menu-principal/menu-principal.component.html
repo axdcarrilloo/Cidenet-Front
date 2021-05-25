@@ -1,0 +1,35 @@
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+<!-- Barra de Navegacion -->
+<nav class="navbar navMenuPrincipal">
+    <div class="navbar-header">
+        <a href="" class="navbar-brand">
+            <img src="./../../assets/icon/IconoCarro.png" class="iconoMain">
+        </a>
+    </div>
+
+    <div class="collapse navbar-collapse navbar-ex1-collapse">
+        <ul class="nav navbar-nav">
+            <li><button mat-button [matMenuTriggerFor]="menuCarro" class="btnItemMain"> Carros <b class="caret"></b></button>
+                <mat-menu #menuCarro="matMenu">
+                    <button mat-menu-item routerLink="registro-carro"> Registrar </button>
+                    <button mat-menu-item routerLink="consultar-carros"> Consultar </button>
+                </mat-menu>
+            </li>
+
+            <li><button mat-button [matMenuTriggerFor]="menuDesplazamiento" class="btnItemMain"> Desplazamiento <b class="caret"></b></button>
+                <mat-menu #menuDesplazamiento="matMenu">
+                    <button mat-menu-item routerLink="registro-desplazamiento"> Registrar </button>
+                    <button mat-menu-item routerLink="consultar-desplazamiento"> Consultar </button>
+                </mat-menu>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>

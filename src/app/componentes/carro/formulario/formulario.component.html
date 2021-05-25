@@ -1,0 +1,27 @@
+<form [formGroup]="carroForm" (ngSubmit)="guardar($event)" class="formMain" novalidate>
+    <p>
+        <input type="text" formControlName="placa" class="inputsForm" placeholder="Placa" required>
+    </p>
+    <div *ngIf="carroForm.get('placa')?.errors && carroForm.get('placa')?.touched">
+        <h5 *ngIf="carroForm.get('placa')?.hasError('required')" class="h5ValidateCampos">
+            La placa es un campo requerido
+        </h5>
+    </div>
+
+    <p>
+        <input type="text" formControlName="marca" class="inputsForm" placeholder="Marca" required>
+    </p>
+    <div *ngIf="carroForm.get('marca')?.errors && carroForm.get('marca')?.touched">
+        <h5 *ngIf="carroForm.get('marca')?.hasError('required')" class="h5ValidateCampos">
+            La marca es un campo requerido
+        </h5>
+    </div>
+
+    <p>
+        <select class="inputsSelectForm" formControlName="conductor" required>
+            <option *ngFor="let conductor of conductoresRegistrados" [ngValue]="conductor"> {{ conductor.cedula +' - '+ conductor.nombre }} </option>
+        </select>
+    </p>
+
+    <button mat-button type="submit" class="btnRegister"> Registrar </button>
+</form>

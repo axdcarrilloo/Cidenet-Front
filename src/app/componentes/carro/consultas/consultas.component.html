@@ -1,0 +1,31 @@
+<div class="divMain">
+    <div class="divSearch">
+        <input type="text" class="inputSearch" (keyup)="buscarCon()" [(ngModel)]="contrainsSearch" placeholder="Placa o marca">
+    </div>
+
+    <table datatable class="tableMain">
+        <thead>
+            <tr>
+                <th class="tdHeader"> Placa </th>
+                <th class="tdHeader"> Marca </th>
+                <th class="tdHeader"> Conductor </th>
+                <th class="tdHeader"> Acciones </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let carro of carros">
+                <td>{{ carro.placa }}</td>
+                <td>{{ carro.marca }}</td>
+                <td>{{ carro.conductor.cedula +' - '+ carro.conductor.nombre}}</td>
+                <td>
+                    <button class="btnIcon" title="Eliminar" (click)="eliminar(carro.id)">
+                      <img class="iconBoton" src="./../../../../assets/icon/Eliminar.png"/>
+                    </button>
+                    <button class="btnIcon" title="Editar" (click)="modificar(carro)">
+                      <img class="iconBoton" src="./../../../../assets/icon/Editar.png"/>
+                    </button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

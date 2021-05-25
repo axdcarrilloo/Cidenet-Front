@@ -1,0 +1,20 @@
+.divDialog {
+    display: flex;
+}
+
+.Imagen {
+    width: 40px;
+}
+
+.pMessage {
+    margin-top: 13px;
+}
+
+.btnAceptar {
+    background-color: #11BBD9;
+    width: 100px;
+    font-weight: bold;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 15px;
+}

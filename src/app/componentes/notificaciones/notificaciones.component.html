@@ -1,0 +1,8 @@
+<h1 mat-dialog-title>{{ title }}</h1>
+<div class="divDialog">
+    <img class="Imagen" src='{{ urlIcon }}' />
+    <p class="pMessage">{{ message }}</p>
+</div>
+<div mat-dialog-actions>
+    <button mat-button (click)="confirmed()" class="btnAceptar">Aceptar</button>
+</div>

@@ -1,0 +1,36 @@
+<form [formGroup]="desplazamientoForm" (ngSubmit)="guardar($event)" class="formMain" novalidate>
+    <p>
+        <select class="inputsSelectForm" formControlName="placaCarro" required>
+            <option *ngFor="let carro of carros" [ngValue]="carro.placa"> {{ carro.placa +' - '+ carro.marca }} </option>
+        </select>
+    </p>
+
+    <p>
+        <input type="text" formControlName="origen" class="inputsForm" placeholder="Origen" required>
+    </p>
+    <div *ngIf="desplazamientoForm.get('origen')?.errors && desplazamientoForm.get('origen')?.touched">
+        <h5 *ngIf="desplazamientoForm.get('origen')?.hasError('required')" class="h5ValidateCampos">
+            El origen es un campo requerido
+        </h5>
+    </div>
+
+    <p>
+        <input type="text" formControlName="destino" class="inputsForm" placeholder="Destino" required>
+    </p>
+    <div *ngIf="desplazamientoForm.get('destino')?.errors && desplazamientoForm.get('destino')?.touched">
+        <h5 *ngIf="desplazamientoForm.get('destino')?.hasError('required')" class="h5ValidateCampos">
+            El destino es un campo requerido
+        </h5>
+    </div>
+
+    <p>
+        <mat-form-field appearance="fill">
+            <mat-label>Custom calendar header</mat-label>
+            <input matInput [matDatepicker]="picker">
+            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker formControlName="fechaOrigen"></mat-datepicker>
+        </mat-form-field>
+    </p>
+
+    <button mat-button type="submit" class="btnRegister"> Registrar </button>
+</form>
