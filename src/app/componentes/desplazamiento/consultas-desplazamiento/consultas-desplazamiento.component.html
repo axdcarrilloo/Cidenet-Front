@@ -1,1 +1,35 @@
-<p>consultas-desplazamiento works!</p>
+<div class="divMain">
+    <div class="divSearch">
+        <input type="text" class="inputSearch" [(ngModel)]="contrainsSearch" placeholder="Placa">
+        <button class="btnBuscar" title="Eliminar" (click)="buscarPorPlaca()">
+            Buscar
+          </button>
+    </div>
+
+    <table datatable class="tableMain">
+        <thead>
+            <tr>
+                <th class="tdHeader"> Placa </th>
+                <th class="tdHeader"> Origen </th>
+                <th class="tdHeader"> Destino </th>
+                <th class="tdHeader"> Fecha origen </th>
+                <th class="tdHeader"> Fecha destino </th>
+                <th class="tdHeader"> Acciones </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let desplazamiento of desplazamientos">
+                <td>{{ desplazamiento.placaCarro }}</td>
+                <td>{{ desplazamiento.origen }}</td>
+                <td>{{ desplazamiento.destino }}</td>
+                <td>{{ desplazamiento.fechaOrigen}}</td>
+                <td>{{ desplazamiento.fechaDestino}}</td>
+                <td>
+                    <button class="btnIcon" title="Eliminar" (click)="eliminar(desplazamiento.id)">
+                      <img class="iconBoton" src="./../../../../assets/icon/Eliminar.png"/>
+                    </button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

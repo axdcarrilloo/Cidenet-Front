@@ -12,6 +12,7 @@
     border-bottom: 2px solid gray;
     text-align: center;
     height: 35px;
+    margin-top: 20px;
 }
 
 .inputsForm:focus {
@@ -23,7 +24,6 @@
     border-bottom: 2px solid blue;
     height: 35px;
     width: 180px;
-    margin-top: 25px;
 }
 
 .btnRegister {

@@ -1,4 +1,4 @@
-<form [formGroup]="desplazamientoForm" (ngSubmit)="guardar($event)" class="formMain" novalidate>
+<form [formGroup]="desplazamientoForm" (ngSubmit)="guardar()" class="formMain" novalidate>
     <p>
         <select class="inputsSelectForm" formControlName="placaCarro" required>
             <option *ngFor="let carro of carros" [ngValue]="carro.placa"> {{ carro.placa +' - '+ carro.marca }} </option>
@@ -24,12 +24,11 @@
     </div>
 
     <p>
-        <mat-form-field appearance="fill">
-            <mat-label>Custom calendar header</mat-label>
-            <input matInput [matDatepicker]="picker">
-            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
-            <mat-datepicker #picker formControlName="fechaOrigen"></mat-datepicker>
-        </mat-form-field>
+        <input type="date" class="inputsForm" placeholder="Fecha origen" formControlName="fechaOrigen" />
+    </p>
+
+    <p>
+        <input type="date" class="inputsForm" placeholder="Fecha destino" formControlName="fechaDestino" />
     </p>
 
     <button mat-button type="submit" class="btnRegister"> Registrar </button>

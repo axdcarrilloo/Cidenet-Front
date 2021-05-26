@@ -5,10 +5,16 @@
 export const environment = {
   production: false,
   CONSULTAR_CONDUCTORES: 'http://localhost:2004/Cidenet/conductor/consultar',
+
   REGISTRAR_CARRO: 'http://localhost:2004/Cidenet/carro/registrar',
   CONSULTAR_CARROS: 'http://localhost:2004/Cidenet/carro/consultar',
   CONSULTAR_CARROS_PLACAMARCA: 'http://localhost:2004/Cidenet/carro/consultarPlacaMarca/',
-  ELIMINAR_CARRO: 'http://localhost:2004/Cidenet/carro/eliminar/'
+  ELIMINAR_CARRO: 'http://localhost:2004/Cidenet/carro/eliminar/',
+
+  REGISTRAR_DESPLAZAMIENTO: 'http://localhost:2004/Cidenet/desplazamiento/registrar',
+  CONSULTAR_DESPLAZAMIENTO: 'http://localhost:2004/Cidenet/desplazamiento/consultar',
+  ELIMINAR_DESPLAZAMIENTO: 'http://localhost:2004/Cidenet/desplazamiento/eliminar/',
+  CONSULTAR_DESPLAZAMIENTO_PLACA: 'http://localhost:2004/Cidenet/desplazamiento/consultarPlaca/'
 };
 
 /*
